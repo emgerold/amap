@@ -25,7 +25,12 @@ $(document).ready(function(){
         var myOptions = {
             zoom: 16,
             center: myLatlng,
-            mapTypeId: google.maps.MapTypeId.TERRAIN
+            mapTypeId: google.maps.MapTypeId.TERRAIN,
+            panControl: false,
+            streetViewControl: false,
+            zoomControlOptions: {
+                position: google.maps.ControlPosition.RIGHT_TOP
+            }
         };
         areasMap = new google.maps.Map(mapEl, myOptions);
 
@@ -323,6 +328,8 @@ $(document).ready(function(){
 
         // open menu
         $('nav a.btn').bind('click', function(){
+            $('#image-wrapper').removeClass('active');
+            $('#map').removeClass('small');
             var isActive = $(this).parents('nav').hasClass('active');
             if (isActive) $(this).parents('nav').removeClass('active');
             else $(this).parents('nav').addClass('active');
@@ -380,6 +387,7 @@ $(document).ready(function(){
     function loadImages(obj) {
         $('#image-wrapper').addClass('active');
         $('#map').addClass('small');
+        $('nav#filter').removeClass('active');
 
         $('#image-wrapper > [data-text="heading"]').text(obj.name);
         $('#image-wrapper ul li').remove();
