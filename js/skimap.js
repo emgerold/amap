@@ -118,19 +118,19 @@ $(document).ready(function(){
 
         var heading = "<h2>"+skiareas.name+"</h2>";
         var visits = "<p>Days visited: "+skiareas.visits+"</p>";
-        var yearsList = "<ul>";
-        yearsList += '<li><h3>Skidays:</h3></li>';
+        var yearsList = "<p>Skidays: ";
         var yearsData = skiareas.years.split(',');
         var yearsLength = skiareas.years.split(',').length - 1;
         var imgLinkId;
 
         if (skiareas.imgId !== "") {
-            imgLinkId = "<a href='#' class='img-load link' onclick='loadData(\"img\","+skiareas.imgId+");'>View images</a>"
+            imgLinkId = "<a href='#' class='img-load link big' title='View images' onclick='loadData(\"img\","+skiareas.imgId+");'></a>"
         }
 
+
          $.each(yearsData, function(index, value){
-            yearsList += '<li>'+value+'</li>';
-            if (index === yearsLength) yearsList += '</ul>';
+            yearsList += value+', ';
+            if (index === yearsLength) yearsList += '</p>';
         });
 
         var content = {"heading": heading, "years": yearsList, "visits": visits, "imgLinkId": imgLinkId};
@@ -359,7 +359,7 @@ $(document).ready(function(){
     }
     // -------------------------------------------------------------------------------------------------
 
-    // CREATE IMAGES-------------------------------------------------------------------------------------
+    // CREATE / ADD IMAGES-------------------------------------------------------------------------------------
     function createImage(imgSource) {
 
         var i = document.createElement('img');
@@ -371,7 +371,7 @@ $(document).ready(function(){
 
         a.appendChild(i);
         l.appendChild(a);
-        $('#image-wrapper > ul').append(l);
+        $('#image-wrapper ul').append(l);
 
     }
     // --------------------------------------------------------------------------------------------------
@@ -381,7 +381,7 @@ $(document).ready(function(){
         $('#image-wrapper').addClass('active');
         $('#map').addClass('small');
 
-        $('#image-wrapper > h2').text(obj.name);
+        $('#image-wrapper > [data-text="heading"]').text(obj.name);
         $('#image-wrapper ul li').remove();
 
         for (var i = 0; i < obj.images.length; i++) {
@@ -389,7 +389,7 @@ $(document).ready(function(){
             createImage(img);
         }
         //$('#image-wrapper > ul').css('height', obj.images.length * 150);
-        $('#image-wrapper > ul > li').on('click', function(){zoomImage($(this))});
+        $('#image-wrapper ul > li').on('click', function(){zoomImage($(this))});
 
     }
     // --------------------------------------------------------------------------------------------------

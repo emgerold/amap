@@ -2,11 +2,11 @@
   {
     "id" : "0",
     "name": "Downtown",
-    "images": ["aa-01.jpg", "aa-02.jpg"]
+    "images": ["aa-01.png", "aa-02.jpg"]
     },
   {
     "id" : "1",
     "name": "Upper Side",
-    "images": ["bb-01.jpg"]
+    "images": ["bb-01.png", "bb-02.png"]
     }
 ]
