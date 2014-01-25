@@ -269,10 +269,10 @@ $(document).ready(function(){
 
         // YEARS
         filters.years.sort();
+        var yearsHeading = document.createElement('h3');
+            yearsHeading.innerHTML = "Select years: ";
         var yearsList = document.createElement('ul');
         var li = document.createElement('li');
-            li.innerHTML = "Select years: ";
-            yearsList.appendChild(li);
 
         $.each(filters.years, function(index,value){
             var li = document.createElement('li');
@@ -283,14 +283,12 @@ $(document).ready(function(){
             yearsList.appendChild(li);
         });
 
-        var info = document.createElement('li');
-        var p = document.createElement('em');
-            p.innerHTML = "This project is in beta, happy bug reporting.";
-            info.className = "info";
-            info.innerHTML = "i";
 
-        info.appendChild(p);
-        yearsList.appendChild(info);
+        var info = document.createElement('p');
+            info.innerHTML = "This project is in beta, happy bug reporting.";
+
+        $('#filter').append(info);
+        $('#filter').append(yearsHeading);
         $('#filter').append(yearsList);
 
         initFilterBindings();
