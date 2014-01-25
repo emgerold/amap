@@ -1,0 +1,12 @@
+[
+  {
+    "id" : "0",
+    "name": "Downtown",
+    "images": ["aa-01.jpg", "aa-02.jpg"]
+    },
+  {
+    "id" : "1",
+    "name": "Upper Side",
+    "images": ["bb-01.jpg"]
+    }
+]

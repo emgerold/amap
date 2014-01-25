@@ -1,0 +1,18 @@
+[
+{
+    "id" : "0",
+    "name" : "From Heutal",
+    "geo" : "48.4275600,9.3009800",
+    "visits": "~",
+    "years": "1991",
+    "imgId":""
+    },
+{
+    "id" : "1",
+    "name" : "to Swedenberg",
+    "geo" : "46.816667, 8.400000",
+    "visits": "17",
+    "years": "2013",
+    "imgId":""
+    }
+]
