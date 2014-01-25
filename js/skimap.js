@@ -388,7 +388,8 @@ $(document).ready(function(){
             var img = obj.images[i];
             createImage(img);
         }
-        //$('#image-wrapper > ul').css('height', obj.images.length * 150);
+
+        $('#image-wrapper ul').css('width', obj.images.length * 144 +'px');
         $('#image-wrapper ul > li').on('click', function(){zoomImage($(this))});
 
     }

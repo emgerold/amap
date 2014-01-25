@@ -303,10 +303,9 @@ p.error {
 }
 #image-wrapper ul {
     height: 150px;
-
-
     padding: 10px 0;
-    width: 1000%;
+    width: 100%;
+    margin:0 auto;
 }
 #image-wrapper li {
     border: 2px solid #00353D;
