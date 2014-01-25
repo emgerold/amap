@@ -247,6 +247,7 @@ $(document).ready(function(){
                 break;
             case "img":
                 $.getJSON('data/skiimages.json', function(data) { handleResult("img", data, id);});
+                $('#map').removeClass('activeMenu');
                 break;
         }
 
@@ -329,8 +330,13 @@ $(document).ready(function(){
             $('#image-wrapper').removeClass('active');
             $('#map').removeClass('small');
             var isActive = $(this).parents('nav').hasClass('active');
-            if (isActive) $(this).parents('nav').removeClass('active');
-            else $(this).parents('nav').addClass('active');
+            if (isActive) {
+                $(this).parents('nav').removeClass('active');
+                $('#map').removeClass('activeMenu');
+            } else {
+                $(this).parents('nav').addClass('active');
+                $('#map').addClass('activeMenu')
+            }
         });
 
         // activate filter

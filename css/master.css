@@ -165,6 +165,10 @@ div#map.small {
     height:50%;
     border-bottom: 2px solid #020C17;
 }
+div#map.activeMenu {
+    width:70%;
+    left:30%;
+}
 
 /* MENUE
 --------------------------------------------------------------------------------------*/
