@@ -190,7 +190,7 @@ $(document).ready(function(){
            maxWidth: 250,
            minHeight: 100,
            maxHeight:200,
-           disableAutoPan: false,
+           disableAutoPan: true,
            hideCloseButton: true
         });
 
