@@ -336,6 +336,7 @@ $(document).ready(function(){
             } else {
                 $(this).parents('nav').addClass('active');
                 $('#map').addClass('activeMenu')
+                fitMarkerBounds();
             }
         });
 
