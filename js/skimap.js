@@ -363,7 +363,7 @@ $(document).ready(function(){
     function createImage(imgSource) {
 
         var i = document.createElement('img');
-        i.src = "img/ski/"+imgSource;
+        i.src = "data/skiimages/"+imgSource;
         var a = document.createElement('a');
         a.href = "#";
         a.className = "zoom";
