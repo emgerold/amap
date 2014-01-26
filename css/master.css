@@ -428,6 +428,11 @@ img#marker-image, img#marker-shadow {
     width:50%;
     left:-50%;
   }
+  nav .scroll-container {
+    overflow-x:hidden;
+    overflow-y:scroll;
+    max-height: 80%;
+  }
   #map.activeMenu {
     left:50%;
     width:50%;
