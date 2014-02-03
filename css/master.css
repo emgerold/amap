@@ -192,6 +192,7 @@ nav {
     width: 25%;
     border-right:10px solid #000;
     padding: 25px;
+    z-index: 1;
 
 
     -moz-box-sizing:border-box;
