@@ -364,6 +364,10 @@ p.error {
 #image-wrapper li:hover {
     border-color: #018687;
 }
+#image-wrapper .scroll-container {
+    overflow-x:scroll;
+    overflow-y:hidden;
+}
 
 /* IMAGE ZOOM
 --------------------------------------------------------------------------------------*/
