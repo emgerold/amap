@@ -272,8 +272,6 @@ $(document).ready(function(){
         filters.years.sort();
         var yearsHeading = document.createElement('h3');
             yearsHeading.innerHTML = "Select years: ";
-        var yearsWrapper = document.createElement('div');
-            yearsWrapper.className = "scroll-container";
         var yearsList = document.createElement('ul');
         var li = document.createElement('li');
 
@@ -286,14 +284,12 @@ $(document).ready(function(){
             yearsList.appendChild(li);
         });
 
-        $(yearsWrapper).append(yearsList);
-
         var info = document.createElement('p');
             info.innerHTML = "This project is in beta, happy bug reporting.";
 
-        $('#filter').append(info);
-        $('#filter').append(yearsHeading);
-        $('#filter').append(yearsWrapper);
+        $('#filter > .scroll-container').append(info);
+        $('#filter > .scroll-container').append(yearsHeading);
+        $('#filter > .scroll-container').append(yearsList);
 
         initFilterBindings();
 
